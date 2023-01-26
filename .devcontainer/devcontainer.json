@@ -4,6 +4,20 @@
 	"build": {
 		"dockerfile": "Dockerfile"
 	},
+	"settings": {
+		"editor.codeActionsOnSave": {
+			"source.fixAll.eslint": true
+		},
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.formatOnSave": true
+	},
+	"extensions": [
+		"vector-of-bool.gitflow",
+		"eamodio.gitlens",
+		"mikestead.dotenv",
+		"esbenp.prettier-vscode",
+		"dbaeumer.vscode-eslint"
+	],
 	"initializeCommand": "cd \"${localWorkspaceFolder}\" && git config --local user.email \"$(git config user.email)\" && git config --local user.name \"$(git config user.name)\"",
 	"remoteUser": "node",
 	"runArgs": ["--name=DCA-Bot"]
