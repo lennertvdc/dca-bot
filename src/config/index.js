@@ -6,10 +6,6 @@ const config = {
 		key: process.env.API_KEY,
 		secret: process.env.API_SECRET,
 	},
-	testApi: {
-		key: process.env.TESTNET_API_KEY,
-		secret: process.env.TESTNET_API_SECRET,
-	},
 	fiat: {
 		asset: "EUR",
 		amount: 50,
