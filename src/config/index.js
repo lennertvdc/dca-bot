@@ -10,7 +10,10 @@ const config = {
 		key: process.env.TESTNET_API_KEY,
 		secret: process.env.TESTNET_API_SECRET,
 	},
-	fiat: "EUR",
+	fiat: {
+		asset: "EUR",
+		amount: 50,
+	},
 	trades: [
 		{
 			asset: "BTC",
