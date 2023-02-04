@@ -14,12 +14,12 @@ const config = {
 		{
 			asset: "BTC",
 			currency: "USDT",
-			currencyQty: 30,
+			percentage: 60,
 		},
 		{
 			asset: "ETH",
 			currency: "USDT",
-			currencyQty: 20,
+			percentage: 40,
 		},
 	],
 };
