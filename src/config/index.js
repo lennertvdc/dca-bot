@@ -8,17 +8,16 @@ const config = {
 	},
 	fiat: {
 		asset: "EUR",
-		amount: 50,
+		amount: 0.2,
 	},
+	currency: "USDT",
 	trades: [
 		{
 			asset: "BTC",
-			currency: "USDT",
 			percentage: 60,
 		},
 		{
 			asset: "ETH",
-			currency: "USDT",
 			percentage: 40,
 		},
 	],
