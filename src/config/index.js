@@ -6,21 +6,12 @@ const config = {
 		key: process.env.API_KEY,
 		secret: process.env.API_SECRET,
 	},
-	fiat: {
-		asset: "EUR",
-		amount: 0.2,
-	},
-	currency: "USDT",
-	trades: [
-		{
-			asset: "BTC",
-			percentage: 60,
-		},
-		{
-			asset: "ETH",
-			percentage: 40,
-		},
-	],
 };
+
+if (config.env === "production") {
+	Object.assign(config, require("./production"));
+} else {
+	Object.assign(config, require("./development"));
+}
 
 module.exports = config;
