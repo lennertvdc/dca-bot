@@ -1,6 +1,6 @@
 const config = {
 	fiat: {
-		asset: "EUR",
+		asset: "BNB",
 		amount: 0.2,
 	},
 	currency: "USDT",
