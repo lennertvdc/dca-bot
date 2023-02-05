@@ -13,6 +13,7 @@
 	"author": "Lennert Vandecasteele",
 	"license": "ISC",
 	"dependencies": {
+		"@binance/connector": "^2.0.0-rc.4",
 		"dotenv": "^16.0.3"
 	},
 	"devDependencies": {
