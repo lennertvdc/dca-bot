@@ -18,6 +18,17 @@
 		"esbenp.prettier-vscode",
 		"dbaeumer.vscode-eslint"
 	],
+	"features": {
+		"ghcr.io/devcontainers/features/docker-in-docker:2": {
+			"moby": true,
+			"azureDnsAutoDetection": true,
+			"version": "latest",
+			"dockerDashComposeVersion": "v2"
+		},
+		"ghcr.io/devcontainers-contrib/features/pipx-package:1": {
+			"package": "aws-sam-cli"
+		}
+	},
 	"initializeCommand": "cd \"${localWorkspaceFolder}\" && git config --local user.email \"$(git config user.email)\" && git config --local user.name \"$(git config user.name)\"",
 	"remoteUser": "node",
 	"runArgs": ["--name=DCA-Bot"]
