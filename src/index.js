@@ -4,7 +4,7 @@ const config = require("./config");
 const options = config.env === "production" ? {} : { baseURL: "https://testnet.binance.vision" };
 const client = new Spot(config.api.key, config.api.secret, options);
 
-(async () => {
+module.exports.handler = async () => {
 	const fiat = await getAsset(config.fiat.asset);
 	if (fiat.free >= config.fiat.amount) {
 		const symbol = config.fiat.asset + config.currency;
@@ -18,7 +18,7 @@ const client = new Spot(config.api.key, config.api.secret, options);
 			await client.newOrder(symbol, "BUY", "MARKET", { quoteOrderQty });
 		});
 	}
-})();
+};
 
 async function getAsset(asset) {
 	const account = await client.account();
