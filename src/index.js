@@ -9,7 +9,7 @@ module.exports.handler = async () => {
 	if (fiat.free >= config.fiat.amount) {
 		const symbol = config.fiat.asset + config.currency;
 
-		const order = await client.newOrder(symbol, "BUY", "MARKET", { quantity: config.fiat.amount });
+		const order = await client.newOrder(symbol, "SELL", "MARKET", { quantity: config.fiat.amount });
 		const currencyQty = order.data.cummulativeQuoteQty;
 
 		config.trades.forEach(async (trade) => {
