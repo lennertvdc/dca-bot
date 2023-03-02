@@ -15,7 +15,7 @@ parallel = true
 [default.deploy]
 [default.deploy.parameters]
 capabilities = "CAPABILITY_IAM"
-confirm_changeset = true
+confirm_changeset = false
 s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-pa9qpw38sga6"
 s3_prefix = "dca-bot"
 region = "eu-west-3"
