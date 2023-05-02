@@ -4,11 +4,13 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"start": "node src/index.js",
+		"start": "sam local invoke",
+		"dev": "node -e 'require(`./src/index`).handler()'",
 		"lint": "npx eslint src",
 		"lint:fix": "npm run lint -- --fix",
 		"prettier": "npx prettier src --check",
-		"prettier:fix": "npm run prettier -- --write"
+		"prettier:fix": "npm run prettier -- --write",
+		"deploy": "sam deploy"
 	},
 	"author": "Lennert Vandecasteele",
 	"license": "ISC",
