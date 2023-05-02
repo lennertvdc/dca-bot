@@ -29,7 +29,6 @@
 			"package": "aws-sam-cli"
 		}
 	},
-	"initializeCommand": "cd \"${localWorkspaceFolder}\" && git config --local user.email \"$(git config user.email)\" && git config --local user.name \"$(git config user.name)\"",
 	"remoteUser": "node",
 	"runArgs": ["--name=DCA-Bot"]
 }
