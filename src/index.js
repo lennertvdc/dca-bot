@@ -7,14 +7,18 @@ const client = new Spot(config.api.key, config.api.secret, options);
 module.exports.handler = async () => {
 	const fiat = await getAsset(config.fiat.asset);
 	if (fiat.free >= config.fiat.amount) {
-		const symbol = config.fiat.asset + config.currency;
-		const order = await client.newOrder(symbol, "SELL", "MARKET", { quantity: config.fiat.amount });
-		const currencyQty = order.data.cummulativeQuoteQty;
+		let currencyQty = config.fiat.amount;
+		if(config.fiat.asset !== config.currency) {
+			const symbol = config.fiat.asset + config.currency;
+			const order = await client.newOrder(symbol, "SELL", "MARKET", { quantity: config.fiat.amount });
+			currencyQty = order.data.cummulativeQuoteQty;
+		}
 
 		for (const trade of config.trades) {
 			const quoteOrderQty = floor((trade.percentage / 100) * currencyQty, 2);
 			const symbol = trade.asset + config.currency;
-			await client.newOrder(symbol, "BUY", "MARKET", { quoteOrderQty });
+			const order = await client.newOrder(symbol, "BUY", "MARKET", { quoteOrderQty });
+			console.log(order.data);
 		}
 	}
 };
