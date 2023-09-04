@@ -3,6 +3,9 @@
 	"version": "1.0.0",
 	"description": "",
 	"main": "index.js",
+	"files": [
+		"/src"
+	],
 	"scripts": {
 		"start": "sam local invoke",
 		"dev": "node -e 'require(`./src/index`).handler()'",
