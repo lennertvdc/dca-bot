@@ -1,7 +1,7 @@
 const config = {
 	fiat: {
-		asset: "BNB",
-		amount: 0.2,
+		asset: "USDT",
+		amount: 50,
 	},
 	currency: "USDT",
 	trades: [
