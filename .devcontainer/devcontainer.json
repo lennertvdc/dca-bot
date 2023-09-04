@@ -27,7 +27,8 @@
 		},
 		"ghcr.io/devcontainers-contrib/features/pipx-package:1": {
 			"package": "aws-sam-cli"
-		}
+		},
+		"ghcr.io/devcontainers/features/aws-cli:1": {}
 	},
 	"remoteUser": "node",
 	"runArgs": ["--name=DCA-Bot"]
