@@ -19,12 +19,12 @@
 		"dbaeumer.vscode-eslint"
 	],
 	"features": {
-		"ghcr.io/devcontainers/features/docker-in-docker:2": {
-			"moby": true,
-			"azureDnsAutoDetection": true,
-			"version": "latest",
-			"dockerDashComposeVersion": "v2"
-		},
+		// "ghcr.io/devcontainers/features/docker-in-docker:2": {
+		// 	"moby": true,
+		// 	"azureDnsAutoDetection": true,
+		// 	"version": "latest",
+		// 	"dockerDashComposeVersion": "v2"
+		// },
 		"ghcr.io/devcontainers-contrib/features/pipx-package:1": {
 			"package": "aws-sam-cli"
 		},
